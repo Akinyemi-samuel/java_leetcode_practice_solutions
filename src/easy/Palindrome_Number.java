@@ -12,12 +12,23 @@ package easy;
 public class Palindrome_Number {
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome(-121));
+        System.out.println(isPalindrome(121));
     }
 
     public static boolean isPalindrome(int x) {
+
+        // SOLUTION 1
         String strx = String.valueOf(x);
         StringBuilder stringBuilder = new StringBuilder(strx).reverse();
         return strx.contentEquals(stringBuilder);
+
+
+       // SOLUTION 2
+//        String reversedString = "";
+//        for(char c : strx.toCharArray()){
+//            reversedString = c + reversedString;
+//        }
+//        return strx.contentEquals(reversedString);
+
     }
 }
