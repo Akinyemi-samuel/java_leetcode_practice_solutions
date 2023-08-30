@@ -39,14 +39,16 @@ public class Roman_to_Integer {
     }
 
     public static int romanToInt(String s) {
-        Map<Character, Integer> roman = new HashMap<>();
-        roman.put('I', 1);
-        roman.put('V', 5);
-        roman.put('X', 10);
-        roman.put('L', 50);
-        roman.put('C', 100);
-        roman.put('D', 500);
-        roman.put('M', 1000);
+        Map<Character, Integer> roman = new HashMap<>(){{
+            put('I', 1);
+            put('V', 5);
+            put('X', 10);
+            put('L', 50);
+            put('C', 100);
+            put('D', 500);
+            put('M', 1000);
+        }};
+
         int total = 0;
 
         for (int i = 0; i < s.length(); i++) {
